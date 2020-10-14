@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>FooPeeps:What to eat?</title>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Gothic A1' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Darker Grotesque' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="general_stylesheet.css">
+
+        <style>
+            .food-selection
+            {
+                background-color: rgb(247, 115, 115);
+                position:relative;
+                top:70px;
+                left:150px;
+                font-family:Kaushan Script;
+                width:1200px;
+                height:620px;
+                border-radius:20px;
+                
+            }
+
+            #heading{
+                font-size:45px;
+                position:relative;
+                top:5px;
+                left:10px;
+            }
+
+            #sub{
+                font-family:Darker Grotesque;
+                font-size:29px;
+                position:relative;
+                top:4px;
+                left:10px;
+            }
+
+            .mySlides{
+                position:relative;
+                width:350px;
+                height:300px;
+                left:420px;
+                top:40px;
+
+            }
+
+            button-arrows{
+            background-color:black;
+            font-family:cambria;
+            width:300px;
+            height:50px;
+            border: none;
+            color: white;
+            
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius:10px;
+            }
+
+            #button-left{
+               position:relative;
+                top:-140px;
+                left:320px;
+                width:50px;
+                height:50px;
+                cursor:pointer;
+                
+                
+            }
+
+            #button-right{
+                position:relative;
+                top:-140px;
+                left:760px;
+                width:50px;
+                height:50px;
+                cursor:pointer;
+                
+
+            }
+
+            #bottom{
+                position:relative;
+                left:420px;
+                top:35px;
+                font-family:Delius;
+                font-size:24px;
+            }
+
+            .accept{
+                position:relative;
+                left:250px;
+
+            }
+
+            .reject{
+                position:relative;
+                left:650px;
+            }
+
+            .done{
+                position: relative;
+                top:70px;
+                left:700px;
+                font-family:Barrio;
+
+            }
+
+            button:hover{
+                background-color:rgb(198, 252, 214);
+                color:black;
+              }
+
+
+        </style>
+
+        </head>
+
+        <body>
+                <div class="animated_background" style="height:100%;">
+                   
+
+                        <ul class="navigation_bar">
+                         <li class="nav_main"><a class="" href="index.html" style="font-family:Kaushan Script; font-size:20px;"><b>FooPeeps</b></a></li>
+                         <li class="nav_icons menuBars"><a href="MenuPage.html">Menu</a></li>
+                         
+                       </ul>
+
+                       <div class="food-selection">
+                            <div id="heading">What to eat?</div>
+                            <div id="sub">Click the foods you like, we'll help you narrow down your choices!</div>
+                            <img class="mySlides" src="selection1.jpg" >
+                            <img class="mySlides" src="selection2.jpg" >
+                            <img class="mySlides" src="selection3.jpg" >
+                            <img class="mySlides" src="selection4.jpg" >
+                            <button class="button-arrows" id="button-left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="button-arrows" id="button-right" onclick="plusDivs(1)">&#10095;</button>
+                            <div id="bottom">Click the arrows for more options!</div>
+                            <button class="button accept">ACCEPT</button>
+                            <button class="button reject">REJECT</button>
+                            <button class="button done" onclick="location.href='what_to_eat_result.html';" >DONE!</button>
+                            
+                            </div>
+
+                            <script>
+                                    var slideIndex = 1;
+                                    showDivs(slideIndex);
+                                    
+                                    function plusDivs(n) {
+                                      showDivs(slideIndex += n);
+                                    }
+                                    
+                                    function showDivs(n) {
+                                      var i;
+                                      var x = document.getElementsByClassName("mySlides");
+                                      if (n > x.length) {slideIndex = 1}
+                                      if (n < 1) {slideIndex = x.length}
+                                      for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                      }
+                                      x[slideIndex-1].style.display = "block";  
+                                    }
+                                    </script>
+                        
+        </body>

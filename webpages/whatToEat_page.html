@@ -1,0 +1,304 @@
+<html>
+    <head>
+        <title>FooPeeps:Sign Up</title>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Gothic A1' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Darker Grotesque' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="general_stylesheet.css">
+
+        <style>
+        .color-change-3x {
+	-webkit-animation: color-change-3x 8s linear infinite alternate both;
+            animation: color-change-3x 8s linear infinite alternate both;
+            position:absolute;
+            top:100px;
+            left:150px;
+            border-radius:20px;
+            height:600px;
+            width:1200px;
+        }
+
+
+        @-webkit-keyframes color-change-3x {
+            0% {
+              background: #19dcea;
+              
+            }
+            50% {
+              background: #b22cff;
+              
+
+            }
+            100% {
+              background: #ea2222;
+              
+            }
+          }
+
+          .questionnaire_body{
+            font-family:Delius;
+            font-size:25px;
+            position:relative;
+            top:150px;
+            left:40px;
+            font-weight:630;
+            
+
+          }
+
+          #questionnaire_start_button{
+            
+              background-color:black;
+              font-family:Barrio;
+              width:170px;
+              height:50px;
+              border: none;
+              color: white;
+              
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 22px;
+              cursor: pointer;
+              border-radius:10px;
+              position:relative;
+              top:250px;
+              left:900px;
+            
+          }
+
+          #questionnaire_start_button:hover{
+            background-color:gold;
+            color:black;
+          }
+
+
+
+          /*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  top:120px;
+  left:480px;
+  
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open ( ie active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: rgb(255, 30, 188) ;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+          
+
+            
+        </style>
+    </head>
+
+
+    <body>
+        <div class="animated_background" style="height:100%;">
+                   
+
+            <ul class="navigation_bar">
+             <li class="nav_main"><a class="" href="index.html" style="font-family:Kaushan Script; font-size:20px;"><b>FooPeeps</b></a></li>
+           </ul>
+           <div class="color-change-3x">
+             <div style="font-family:Kaushan Script; position:absolute; top:20px;left:40px;font-size:45;">What to eat?</div>
+             <div style="font-family:Darker Grotesque; position:absolute;top:78px; left:40px;font-size:26;"><i>A few questions for us to understand your current needs</i></div>
+
+             <form>
+             <div class="questionnaire_body">
+                What is your current mood?
+
+             </div>
+
+             <div class="custom-select" style="width:300px;">
+                <select>
+                  <option value="0">Select cuisine:</option>
+                  <option value="1">Happy</option>
+                  <option value="2">Upset</option>
+                  <option value="3">Angry</option>
+                  <option value="4">Sad</option>
+                  <option value="5">Meh</option>
+                  <option value="6">Pleasant</option>
+                </select>
+              </div>
+              <script>
+                  var x, i, j, selElmnt, a, b, c;
+                  /*look for any elements with the class "custom-select":*/
+                  x = document.getElementsByClassName("custom-select");
+                  for (i = 0; i < x.length; i++) {
+                    selElmnt = x[i].getElementsByTagName("select")[0];
+                    /*for each element, create a new DIV that will act as the selected item:*/
+                    a = document.createElement("DIV");
+                    a.setAttribute("class", "select-selected");
+                    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                    x[i].appendChild(a);
+                    /*for each element, create a new DIV that will contain the option list:*/
+                    b = document.createElement("DIV");
+                    b.setAttribute("class", "select-items select-hide");
+                    for (j = 1; j < selElmnt.length; j++) {
+                      /*for each option in the original select element,
+                      create a new DIV that will act as an option item:*/
+                      c = document.createElement("DIV");
+                      c.innerHTML = selElmnt.options[j].innerHTML;
+                      c.addEventListener("click", function(e) {
+                          /*when an item is clicked, update the original select box,
+                          and the selected item:*/
+                          var y, i, k, s, h;
+                          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                          h = this.parentNode.previousSibling;
+                          for (i = 0; i < s.length; i++) {
+                            if (s.options[i].innerHTML == this.innerHTML) {
+                              s.selectedIndex = i;
+                              h.innerHTML = this.innerHTML;
+                              y = this.parentNode.getElementsByClassName("same-as-selected");
+                              for (k = 0; k < y.length; k++) {
+                                y[k].removeAttribute("class");
+                              }
+                              this.setAttribute("class", "same-as-selected");
+                              break;
+                            }
+                          }
+                          h.click();
+                      });
+                      b.appendChild(c);
+                    }
+                    x[i].appendChild(b);
+                    a.addEventListener("click", function(e) {
+                        /*when the select box is clicked, close any other select boxes,
+                        and open/close the current select box:*/
+                        e.stopPropagation();
+                        closeAllSelect(this);
+                        this.nextSibling.classList.toggle("select-hide");
+                        this.classList.toggle("select-arrow-active");
+                    });
+                  }
+                  function closeAllSelect(elmnt) {
+                    /*a function that will close all select boxes in the document,
+                    except the current select box:*/
+                    var x, y, i, arrNo = [];
+                    x = document.getElementsByClassName("select-items");
+                    y = document.getElementsByClassName("select-selected");
+                    for (i = 0; i < y.length; i++) {
+                      if (elmnt == y[i]) {
+                        arrNo.push(i)
+                      } else {
+                        y[i].classList.remove("select-arrow-active");
+                      }
+                    }
+                    for (i = 0; i < x.length; i++) {
+                      if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                      }
+                    }
+                  }
+                  /*if the user clicks anywhere outside the select box,
+                  then close all select boxes:*/
+                  document.addEventListener("click", closeAllSelect);
+              </script>
+
+
+
+
+              
+              <div class="questionnaire_body">
+                
+                What is your current budget?
+
+                <div style="font-weight:300;">
+                
+                  <input type="radio" name="comfort_q" id="r1" value="1" />
+                  <label for="r1"><i>&ltRs.200</i></label>
+                  <input type="radio" name="comfort_q" id="r2" value="2" />
+                  <label for="r2"><i>Rs.200 to Rs.500</i></label>
+                  <input type="radio" name="comfort_q" id="r3" value="3" />
+                  <label for="r3"><i>&gtRs.500</i></label>
+                
+                </div>
+              </div>
+
+              <div class="questionnaire_body" style="position:relative;top:160px;">
+                  Do you want to dine in or go out?
+  
+                  <div style="font-weight:300;">
+                
+                    <input type="radio" name="interested_q" id="s1" value="1" />
+                    <label for="s1"><i>Go out</i></label>
+                    <input type="radio" name="interested_q" id="s2" value="2" />
+                    <label for="s2"><i>Dine in</i></label>
+                    <input type="radio" name="comfort_q" id="s3" value="3" />
+                    <label for="s3"><i>Either</i></label>
+                  
+                  </div>
+                </div>
+
+                <div class="questionnaire_body"  style="position:relative;top:200px;">
+                    How hungry are you?
+    
+                    <div style="font-weight:300;">
+                    
+                      <input type="radio" name="willing" id="t1" value="1">
+                      <label for="t1"><i>Very</i></label>
+                      <input type="radio" name="interested_q" id="t2" value="2">
+                      <label for="t2"><i>Sort of</i></label>
+                      <input type="radio" name="comfort_q" id="t3" value="3">
+                      <label for="t3"><i>Not that much</i></label>
+                    
+                    </div>
+                  </div>
+                  
+                  <button type="button" class="button" onclick="location.href='whatToEat_selection.html';" style="font-family:Barrio;position:relative;top:250px;left:900px;">FINISH!</button>
+                  
+                </form>
+
+             </div>
+            
+    </body>
+</html>

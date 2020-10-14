@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>FooPeeps:Quizzes</title>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Gothic A1' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="general_stylesheet.css">
+    </head>
+    <style>
+            .vert-move {
+                width:900px;
+                height:150px;
+
+                border-radius: 22px;
+                cursor:pointer;
+                -webkit-animation: mover 1s infinite  alternate;
+                animation: mover 1s infinite  alternate;
+            }
+
+            #quiz1{
+                background:url("quiz1_icon.jpg");
+                position:relative;
+                top:80px;
+                left:290px;
+            }
+
+            #quiz2{
+                
+                    background-image:url("quiz2_icon.jpg");
+                    
+                    position:relative;
+                    top:130px;
+                    left:290px;
+                
+            }
+
+            #quiz3{
+                background:url("quiz3_icon.jpg");
+                position:relative;
+                top:180px;
+                left:290px;
+            
+                
+            }
+
+            @-webkit-keyframes mover {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-10px); }
+            }
+            @keyframes mover {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-10px); }
+            }
+
+    </style>
+    <body>
+            <div class="animated_background" style="height:100%;width:100%;">
+                   
+
+                    <ul class="navigation_bar">
+                     <li class="nav_main"><a class="" href="index.html" style="font-family:Kaushan Script; font-size:20px;"><b>FooPeeps</b></a></li>
+                     <li class="nav_icons menuBars"><a href="MenuPage.html">Menu</a></li>
+                     
+                   </ul>
+
+                   <div onclick="location.href='quiz1-carousel.html';" class="vert-move" id="quiz1"></div>
+                   <div onclick="location.href='quiz2-carousel.html';" class="vert-move" id="quiz2"></div>
+                   <div onclick="location.href='quiz3-carousel.html';" class="vert-move" id="quiz3"></div>
+    </body>
+</html>

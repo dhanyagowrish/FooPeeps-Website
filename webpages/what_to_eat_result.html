@@ -1,0 +1,431 @@
+<html>
+    <head>
+        <title>Foopeeps:Home</title>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+            html, body {
+                margin: 0; padding: 0;
+                scroll-behavior: smooth;
+              }
+              .animated_background {
+                background:url("welcome_page_collage_edited.jpg") repeat 0 0;
+                height:1450px;
+                width:100%;
+                margin:0;
+
+
+                box-sizing: border-box;
+                -webkit-animation: slide 30s linear infinite;
+
+                
+
+              }
+              
+              .foopeep_heading {
+                font-family: Kaushan Script;
+                font-size: 50;
+              }
+              
+              @-webkit-keyframes slide {
+                  from { background-position: 0 0; }
+                  to { background-position: -400px 0; }
+              }
+
+              ul.navigation_bar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+              }
+
+              li.nav_icons {
+                float: right;
+              }
+
+              li.nav_main{
+                float:left;
+              }
+
+              li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 13px 15px;
+                text-decoration: none;
+                font-family:verdana;
+                font-size:20px;
+              }
+
+              .nav_icons:hover {
+                background-color:gold;
+                color:black;
+              }
+
+              .button{
+                background-color:black;
+                font-family:Barrio;
+                width:150px;
+                height:50px;
+                border: none;
+                color: white;
+                
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                border-radius:10px;
+              }
+
+              .button1{
+                position:relative;
+                top:200px;
+                left:170px;
+              }
+
+              .loginSignup_prompt{
+                background-color:antiquewhite;
+                width:500px;
+                height:350px;
+                font-family:Architects Daughter;
+                font-size:30px;
+                color:black;
+                border-radius:20px;
+              }
+
+              .login_prompt{
+                position:relative;
+                left: 150px;
+                top:150px;
+              }
+
+              .signup_prompt{
+                position:relative;
+                left:850px;
+                top:-194px;
+              }
+
+ 
+              .loginSignup_statement{
+                position:relative;
+                top:100px;
+              }
+
+              button.button1:hover{
+                opacity:0.7;
+              }
+
+              #about.aboutContact{
+                position: absolute;
+                background-color: pink;
+                width:1295px;
+                height:220px;
+                top:750px;
+                left:100px;
+                background-color:silver;
+                font-family:Delius;
+                opacity: 0.8;
+                border-radius:20px;
+              }
+
+              #contact.aboutContact{
+                position: absolute;
+                background-color: pink;
+                width:1295px;
+                height:220px;
+                top:1100px;
+                left:100px;
+                font-family:Delius;
+                background-color:silver;
+                opacity: 0.8;
+                border-radius:20px;
+
+              }
+
+
+
+
+
+
+              /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+    font-family: ;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color:palegoldenrod;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+
+
+
+    </style>
+</head>
+    <body>
+            <div class="animated_background">
+                   
+
+                   <ul class="navigation_bar">
+                    <li class="nav_main"><a class="" href="index.html" style="font-family:Kaushan Script; font-size:20px;"><b>FooPeeps</b></a></li>
+                    <li class="nav_icons menuBars"><a href="MenuPage.html">Menu</a></li>
+                  </ul>
+
+<style>
+    #map{
+      height:400px;
+      width:80%;
+      margin:100;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      
+      var options = {
+        zoom:13,
+        center:{lat:12.9716,lng:77.5946}
+		
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listening for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+     
+      x = navigator.geolocation;
+      x.getCurrentPosition(success , failure);
+      function success(position)
+        {
+     
+           var myLat = position.coords.latittude;
+           var myLong = postion.coords.longitude;
+           var coordinates = new google.maps.LatLng(myLat,myLong);
+           
+		   var marker1 = new google.maps.Marker({map:map , position:coordinates});
+        }
+		function failure(){}
+      // Array of all markers
+      var markers = [
+        {
+          coords:{lat:12.934058,lng:77.550122},
+           iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Taaza Thindi </h1>'
+		},
+		{
+          coords:{lat:12.931506,lng:77.548599},
+           iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>1947 Restaurant </h1>'         
+        },
+		{
+          coords:{lat:12.93284,lng:77.5501059},
+           iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>NANDINI </h1>'        
+        },
+		{
+          coords:{lat:12.979937,lng:77.530897},
+           iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Pizza Hut </h1>'       
+        },
+		{
+          coords:{lat:12.972648,lng:77.475889},
+           iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Chung Wah </h1>'
+		},
+        {
+		  coords:{lat:12.973456,lng:77.487443},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>PARADISE </h1>'
+        },
+		{
+		  coords:{lat:12.904784,lng:77.521405},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Cafe Down the Alley</h1>'
+        },
+		{
+		  coords:{lat:12.936909,lng:77.515484},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Deja Vu</h1>'
+        },
+		{
+		  coords:{lat:12.924695,lng:77.528959},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Nandhana Palace</h1>'
+        },
+        {
+          coords:{lat:12.933284,lng:77.545166},
+		  iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>KFC </h1>'
+        }
+      ];
+
+      // Looping through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+		  iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          position:props.coords,
+          map:map,
+          
+        });
+
+        
+        if(props.iconImage){
+          // Setting icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Checking content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+  
+  
+  <script>
+  x = navigator.geolocation;
+  x.getCurrentPosition(success , failure);
+  function success(position)
+    {
+     
+       var myLat = position.coords.latittude;
+       var myLong = postion.coords.longitude;
+       var coords = new google.maps.LatLng(myLat,myLong);
+        
+        		
+  
+    }
+	function failure(){}
+  </script>
+  
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB51uK0j8Z_1ASBxo3BKNlhdKqBKcutZDw&callback=initMap">
+    </script>
+				  
+            </div>
+    </body>
+</html>
