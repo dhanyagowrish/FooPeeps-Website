@@ -1,0 +1,342 @@
+<html>
+    <head>
+        <title>Foopeeps:Home</title>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Asul' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+            html, body {
+                margin: 0; padding: 0;
+                scroll-behavior: smooth;
+              }
+              .animated_background {
+                background:url("welcome_page_collage_edited.jpg") repeat 0 0;
+                height:1450px;
+                width:100%;
+                margin:0;
+
+
+                box-sizing: border-box;
+                -webkit-animation: slide 30s linear infinite;
+
+                
+
+              }
+              
+              .foopeep_heading {
+                font-family: Kaushan Script;
+                font-size: 50;
+              }
+              
+              @-webkit-keyframes slide {
+                  from { background-position: 0 0; }
+                  to { background-position: -400px 0; }
+              }
+
+              ul.navigation_bar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+              }
+
+              li.nav_icons {
+                float: right;
+              }
+
+              li.nav_main{
+                float:left;
+              }
+
+              li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 13px 15px;
+                text-decoration: none;
+                font-family:verdana;
+                font-size:20px;
+              }
+
+              .nav_icons:hover {
+                background-color:gold;
+                color:black;
+              }
+
+              .button{
+                background-color:black;
+                font-family:Barrio;
+                width:150px;
+                height:50px;
+                border: none;
+                color: white;
+                
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                border-radius:10px;
+              }
+
+              .button1{
+                position:relative;
+                top:200px;
+                left:170px;
+              }
+
+              .loginSignup_prompt{
+                background-color:antiquewhite;
+                width:500px;
+                height:350px;
+                font-family:Architects Daughter;
+                font-size:30px;
+                color:black;
+                border-radius:20px;
+              }
+
+              .login_prompt{
+                position:relative;
+                left: 150px;
+                top:150px;
+              }
+
+              .signup_prompt{
+                position:relative;
+                left:850px;
+                top:-194px;
+              }
+
+ 
+              .loginSignup_statement{
+                position:relative;
+                top:100px;
+              }
+
+              button.button1:hover{
+                opacity:0.7;
+              }
+
+              #about.aboutContact{
+                position: absolute;
+                background-color: pink;
+                width:1295px;
+                height:220px;
+                top:750px;
+                left:100px;
+                background-color:silver;
+                font-family:Delius;
+                opacity: 0.8;
+                border-radius:20px;
+              }
+
+              #contact.aboutContact{
+                position: absolute;
+                background-color: pink;
+                width:1295px;
+                height:220px;
+                top:1100px;
+                left:100px;
+                font-family:Delius;
+                background-color:silver;
+                opacity: 0.8;
+                border-radius:20px;
+
+              }
+
+
+
+
+
+
+              /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+    font-family: ;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color:palegoldenrod;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+
+
+
+    </style>
+</head>
+    <body>
+            <div class="animated_background">
+                   
+
+                   <ul class="navigation_bar">
+                    <li class="nav_main"><a class="" href="#home" style="font-family:Kaushan Script; font-size:20px;"><b>FooPeeps</b></a></li>
+                    <li class="nav_icons"><a href="#contact">Contact Us</a></li>
+                    <li class="nav_icons"><a href="#about">About</a></li>
+                  </ul>
+
+
+                    <div class="loginSignup_prompt login_prompt">
+                       <center class="loginSignup_statement" id="home">Already a foopeep?</center>
+                        <button type="button" class="button button1" onclick="window.location.href = 'login.php';">LOGIN</button>
+                   
+
+                    </div>
+
+  
+
+                    <div class="loginSignup_prompt signup_prompt">
+                      <center class="loginSignup_statement">New to the family?</center>
+                      <button type="button" class="button button1" onclick="window.location.href = 'register.php';">SIGN UP</button>
+                    </div>
+
+                    <div class="aboutContact" id="about">
+                      About us:
+                      We at Foopeeps take food seriously! We believe in establishing a community
+                 for food enthusiasts. Our mission is to bring together people who are passionate about recipies and
+                 are willing to explore beyond the ordinary.
+                 For us; food is so much more than just a primal instinct.
+                 We want to be able to provide access to all sorts of cuisines made by
+                 a variety of chefs and cooks. The more restaurants there are that
+                 make things differently; the more fun it gets! We sincerely want to
+                 protect that environment.
+                 
+                 Do you think you have what it takes to call yourself a foopeep? Try our quiz at .......   and see for yourself.
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="aboutContact" id="contact">
+                      Want to get in touch with the Foopeeps team? <br>
+                      <br>
+                      Want to send us an email?
+                      <a href = "mailto: foopeeps@gmail.com">foopeeps@gmail.com</a><br>
+                      <br>
+                      
+                      Or phone us at: 1234456778
+
+
+
+
+
+
+
+
+                    </div>
+
+                    
+
+                    
+
+
+                  
+
+
+
+            </div>
+    </body>
+</html>
