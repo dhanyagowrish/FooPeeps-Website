@@ -1,0 +1,79 @@
+html, body {
+                margin: 0; padding: 0;
+                scroll-behavior: smooth;
+              }
+              .animated_background {
+                background:url("welcome_page_collage_edited.jpg") repeat 0 0;
+                height:1450px;
+                width:100%;
+                margin:0;
+
+
+                box-sizing: border-box;
+                -webkit-animation: slide 30s linear infinite;
+
+                
+
+              }
+              
+              .foopeep_heading {
+                font-family: Kaushan Script;
+                font-size: 50;
+              }
+              
+              @-webkit-keyframes slide {
+                  from { background-position: 0 0; }
+                  to { background-position: -400px 0; }
+              }
+
+              ul.navigation_bar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+                position: fixed;
+                width:100%;
+                z-index: 100;
+              }
+
+              li.nav_icons {
+                float: right;
+                
+              }
+
+              li.nav_main{
+                float:left;
+                
+              }
+
+              li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 13px 15px;
+                text-decoration: none;
+                font-family:verdana;
+                font-size:20px;
+              }
+
+              li a:hover {
+                background-color:gold;
+                color:black;
+              }
+
+              .button{
+                background-color:black;
+                font-family:cambria;
+                width:150px;
+                height:50px;
+                border: none;
+                color: white;
+                
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                border-radius:10px;
+              }
